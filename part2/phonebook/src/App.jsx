@@ -67,8 +67,12 @@ const App = () => {
             setMessageSuccess(null)
           }, 5000)
         })
-        .catch(err => {
-          console.log(err);
+        .catch(error => {
+           // está es la forma de acceder al mensaje de error
+          setErrorMessage(error.response.data.error);
+          setTimeout(() => {
+            setErrorMessage(null)
+          }, 5000)
         })
     }
 
@@ -84,8 +88,8 @@ const App = () => {
     if (window.confirm(`Delete ${name}?`)) {
       personsService
         .deletePerson(id)
-        .then((personDelete) => {
-          setPersons(persons.filter((p) => p.id !== personDelete.id)) // actualizo el array
+        .then(() => {
+          setPersons(persons.filter((p) => p.id !== id)) // actualizo el array
         })
         .catch(err => {
           console.log(err)
