@@ -1,0 +1,8 @@
+### Login de usuario enviando username y password, aca se devuelve el TOKEN y se crea.
+POST http://localhost:3001/api/login 
+Content-Type: application/json
+
+{
+    "username":"Gonzalo_77",
+    "password":"123456"
+}

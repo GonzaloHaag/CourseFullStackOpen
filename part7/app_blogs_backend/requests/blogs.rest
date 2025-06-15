@@ -1,0 +1,44 @@
+### get blogs
+GET http://localhost:3001/api/blogs
+
+
+### Create blog mandando el bearer token, que es el token devuelto en el login
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdvbnphbG9fNzciLCJpZCI6IjY4MjM1ZGYzZmY4ZWVkYWNiODhhODQ3MCIsImlhdCI6MTc0OTkzOTI5NSwiZXhwIjoxNzQ5OTQyODk1fQ.ldy9iRayTWD-VbP2MwXJJlwYNEp_STAzk0sK2lheieY
+
+{
+    "title":"Nuevo blog authorization BORRAR",
+    "author":"Gonzalinho",
+    "url":"http://gonzalinho.com",
+    "likes":2
+}
+
+### Comentar blog
+POST  http://localhost:3001/api/blogs/6835c5e22b96e43fa938f17e/comments
+Content-Type: application/json
+
+{
+    "comment":"Segundo comentario"
+}
+
+### Delete blog
+DELETE http://localhost:3001/api/blogs/6835c2e22b96e43fa938f14c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdvbnphbG9fNzciLCJpZCI6IjY4MjM1ZGYzZmY4ZWVkYWNiODhhODQ3MCIsImlhdCI6MTc0ODM1NDQ5NCwiZXhwIjoxNzQ4MzU4MDk0fQ.Br0uYGTREUGPGKLzQpVzv51ZCVmM8CLEGsO-60CtTww
+
+### Update blog 
+PUT http://localhost:3001/api/blogs/68235e16ff8eedacb88a8473
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdvbnphbG9fNzciLCJpZCI6IjY4MjM1ZGYzZmY4ZWVkYWNiODhhODQ3MCIsImlhdCI6MTc0ODM1MjA0NywiZXhwIjoxNzQ4MzU1NjQ3fQ.SD0ca61Zy4FhhrB9UH_VzYkEt54If4cXsHOhhzBUDKE
+
+{
+     "user":"68235df3ff8eedacb88a8470",
+     "likes":5,
+     "author":"Joel poedski",
+     "title":"Probando editar mi blog",
+     "url":"www.newUrl.com"
+
+}
+
+###
+GET http://localhost:3001/api/blogs/6835c5e22b96e43fa938f17e

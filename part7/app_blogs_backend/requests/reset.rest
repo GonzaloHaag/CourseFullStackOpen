@@ -1,0 +1,3 @@
+### Reset db
+
+POST http://localhost:3001/api/testing/reset
