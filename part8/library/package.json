@@ -1,0 +1,27 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "GraphQL y Apollo server",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch --env-file=.env index.js"
+  },
+  "keywords": [
+    "backend",
+    "graphql",
+    "apollo"
+  ],
+  "author": "Gonzalo Haag",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.12.2",
+    "apollo-server-core": "^3.13.0",
+    "graphql": "^16.11.0",
+    "graphql-subscriptions": "^3.0.0",
+    "graphql-tag": "^2.12.6",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.1"
+  }
+}
