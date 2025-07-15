@@ -1,0 +1,37 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Backend con typescript y node.js",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts-node": "ts-node",
+    "calculateBmi": "ts-node bmiCalculator.ts -- -s --someoption",
+    "calculateExercises": "ts-node exerciseCalculator.ts -- -s --someoption",
+    "dev": "ts-node-dev index.ts",
+    "start": "ts-node index.ts",
+    "lint": "eslint --ext .ts"
+  },
+  "keywords": [
+    "backend",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "Gonzalo Haag",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@types/express": "^5.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.36.0",
+    "@typescript-eslint/parser": "^8.36.0",
+    "eslint": "^9.31.0",
+    "globals": "^16.3.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript-eslint": "^8.36.0"
+  }
+}
